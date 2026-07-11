@@ -1,0 +1,31 @@
+.task-list{
+    display: grid;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 20;
+    grid-template-columns: 50px 1fr 2fr 100px;
+}
+
+.list-header{
+    font-weight: bold;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+}
+
+.list-item{
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+}
+.danger{
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.danger:hover{
+    background-color: #c82333;
+}
