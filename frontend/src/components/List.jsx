@@ -3,25 +3,24 @@ import "../style/list.css";
 
 export default function List() {
   const [taskData, setTaskData] = useState([]);
-  const getListData = async () => {
+
+  useEffect(() => {
+    fetch("http://localhost:3200/tasks")
+      .then(r => r.json())
+      .then(d => d.success && setTaskData(d.result));
+  }, []);
+
+  const deleteTask = async (id) => {
+    let item = await fetch(`http://localhost:3200/delete/${id}`, { method: "DELETE" });
+    item = await item.json();
+    if (item.success) {
       let list = await fetch("http://localhost:3200/tasks");
       list = await list.json();
       if (list.success) {
         setTaskData(list.result);
       }
-    };
-    
-  useEffect(() => {
-    getListData();
-    
-  }, []);
-  const deleteTask = async (id) => {
-      let item = await fetch(`http://localhost:3200/delete/${id}`, { method: "DELETE" });
-      item = await item.json();
-      if (item.success) {
-        getListData()
-      }
     }
+  }
   return (
     <div>
       <h2>Task List</h2>

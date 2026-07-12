@@ -1,6 +1,8 @@
 import { MongoClient } from "mongodb"
+import dotenv from "dotenv";
+dotenv.config();
 
-const url = "mongodb+srv://realmayanknarang_db_user:9auBa5oNVdxcW7IZ@cluster0.pdw4xwt.mongodb.net/?serverSelectionTimeoutMS=5000&connectTimeoutMS=5000"
+const url = process.env.MONGO_URI
 const dbname = "todo"
 export const collectionName = "todo"
 const client = new MongoClient(url)
