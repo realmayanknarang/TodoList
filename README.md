@@ -2,13 +2,17 @@
 
 A simple full-stack Todo application built with the MERN-style stack (MongoDB, Express, React, Node.js).
 
-Add tasks, view them in a list, and delete completed ones — clean and minimal.
+Add, edit, search, and manage tasks with a clean full-stack interface.
 
 ## Features
 
 - Add tasks with a title and description
-- View all tasks in a list
+- View all tasks in a paginated list
+- Edit and update existing tasks
+- Mark tasks as complete / incomplete
 - Delete tasks
+- Search tasks by title or description
+- Form validation and error messages
 - Fast, lightweight React frontend built with Vite
 
 ## Tech Stack
@@ -48,7 +52,8 @@ todomern/
         ├── components/
         │   ├── AddTask.jsx
         │   ├── List.jsx
-        │   └── NavBar.jsx
+        │   ├── NavBar.jsx
+        │   └── UpdateTask.jsx
         └── style/
 ```
 
