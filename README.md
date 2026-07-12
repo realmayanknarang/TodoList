@@ -102,18 +102,13 @@ The frontend will run on `http://localhost:5173` (default Vite port).
 
 ## API Endpoints
 
-| Method | Endpoint      | Description       |
-|--------|---------------|-------------------|
-| GET    | `/tasks`      | Get all tasks     |
-| POST   | `/add-task`   | Add a new task    |
-| DELETE | `/delete/:id` | Delete a task by ID |
-
-## Future Improvements
-
-- [ ] Edit/update existing tasks
-- [ ] Mark tasks as complete/incomplete
-- [ ] Add form validation and error messages on the frontend
-- [ ] Add pagination or search for large task lists
+| Method | Endpoint      | Description        |
+|--------|---------------|--------------------|
+| GET    | `/tasks?q=&page=&limit=` | Get tasks (search + pagination) |
+| POST   | `/add-task`   | Add a new task       |
+| PUT    | `/toggle/:id` | Toggle task completed |
+| PUT    | `/update/:id` | Update a task by ID   |
+| DELETE | `/delete/:id` | Delete a task by ID   |
 
 ## Author
 

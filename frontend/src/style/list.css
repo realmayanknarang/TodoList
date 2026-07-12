@@ -4,7 +4,7 @@
     list-style: none;
     padding: 0;
     margin: 20;
-    grid-template-columns: 50px 1fr 2fr 100px;
+    grid-template-columns: 50px 1fr 2fr 140px;
 }
 
 .list-header{
@@ -28,4 +28,99 @@
 }
 .danger:hover{
     background-color: #c82333;
+}
+.edit{
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+.edit:hover{
+    background-color: #0056b3;
+}
+.actions-cell{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+.completed{
+    text-decoration: line-through;
+    color: #999;
+}
+.checkbox{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+.status-msg{
+    text-align: center;
+    padding: 40px 20px;
+    color: #666;
+    font-size: 16px;
+}
+.error-msg{
+    color: #dc3545;
+}
+.search-bar{
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+.search-bar input{
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+.search-btn{
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.search-btn:hover{
+    background-color: #0056b3;
+}
+.clear-btn{
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.clear-btn:hover{
+    background-color: #5a6268;
+}
+.pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-top: 20px;
+}
+.pagination button{
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.pagination button:hover:not(:disabled){
+    background-color: #0056b3;
+}
+.pagination button:disabled{
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+.page-info{
+    font-size: 14px;
+    color: #666;
 }
